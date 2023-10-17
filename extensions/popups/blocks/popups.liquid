@@ -1,0 +1,48 @@
+
+<div class="modal-container">
+      <div class="popup-newsletter">
+        <h3 class="popup-newsletter__title">JOIN US!</h3>
+        <p class="popup-newsletter__subtitle">Sign up to receive 20% off your first order!</p>
+        <button class="popup-newsletter__close link" data-action="close-popup">Close</button>
+        <div class="popup-newsletter__content rte">
+          Discount code: GET20OFF
+        </div>
+        <form id="popup-form">
+          <input type="text" id="first-name" placeholder="First Name" required>
+          <input type="text" id="last-name" placeholder="Last Name" required>
+          <input type="email" id="email" placeholder="Email" required>
+          <input type="tel" id="phone" placeholder="Phone" required>
+          <label for="consent">
+           <input type="checkbox" id="consent" required>
+            Subscribe to receive SMS marketing messages
+          </label>
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% schema %}
+{
+  "name": "Popup-simple",
+  "target": "section",
+  "javascript": "popups.js",
+    "stylesheet": "popups.css",
+    "settings": [
+        {
+        "type": "text",
+        "id": "popup_title",
+        "label": "Popup title",
+        "default": "Code your own Popup Newsletter"
+        },
+        {
+        "type": "text",
+        "id": "popup_content",
+        "label": "Popup content",
+        "default": "Discount code: GET20OFF"
+        }
+    ]}
+{% endschema %}
